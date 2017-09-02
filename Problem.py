@@ -1,9 +1,12 @@
 class Problem(object):
+    """Representation of a problem"""
+
     def __init__(self, initial, goal):
         self.initial = initial
         self.goal = goal
 
     def actions(self, state):
+        """Returns possible actions on current state"""
         actions_list = []
         index_of_blank_space = state.index("0")
 
@@ -28,6 +31,7 @@ class Problem(object):
         return actions_list
 
     def result(self, state, action):
+        """Returns resulting state after a certain action"""
         # Has not taken in account false moves
 
         index_of_blank_space = state.index("0")
@@ -51,19 +55,8 @@ class Problem(object):
         return state
 
     def goal_test(self, state):
+        """Returns boolean whether the goal state has been reached"""
         if state == self.goal:
             return True
         else:
             return False
-
-
-
-# Brief tests
-
-initial = ['1', '2', '3', '0', '4', '5']
-goal = ['0', '1', '2', '3', '4', '5']
-trial = Problem(initial, goal)
-
-print(trial.actions(initial))
-print(trial.result(initial, "Left"))
-print(trial.goal_test(goal))
