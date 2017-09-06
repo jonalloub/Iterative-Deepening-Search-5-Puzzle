@@ -23,7 +23,8 @@ class Node(object):
         node, path_back = self, []
 
         while node:
-            path_back.append(node.action)
+            if node.action is not None:
+                path_back.append(node.action)
             node = node.parent
 
         return list(reversed(path_back))
