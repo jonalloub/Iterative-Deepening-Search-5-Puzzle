@@ -18,4 +18,4 @@ result = iterative_deepening_search(problem)
 
 # Printing the result
 printOut = result.solution()
-print(' - '.join(str(i) for i in printOut))
+print('-'.join(str(i) for i in printOut))

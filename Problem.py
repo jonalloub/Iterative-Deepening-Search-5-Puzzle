@@ -14,19 +14,19 @@ class Problem(object):
         # can only be done if the blank space is in a certain space
         if index_of_blank_space == 0 or index_of_blank_space == 1 \
                 or index_of_blank_space == 2:
-            actions_list.append("Up")
+            actions_list.append("U")
 
         if index_of_blank_space == 3 or index_of_blank_space == 4 \
                 or index_of_blank_space == 5:
-            actions_list.append("Down")
+            actions_list.append("D")
 
         if index_of_blank_space == 0 or index_of_blank_space == 1 \
                 or index_of_blank_space == 3 or index_of_blank_space == 4:
-            actions_list.append("Left")
+            actions_list.append("L")
 
         if index_of_blank_space == 1 or index_of_blank_space == 2 \
                 or index_of_blank_space == 4 or index_of_blank_space == 5:
-            actions_list.append("Right")
+            actions_list.append("R")
 
         return actions_list
 
@@ -38,19 +38,19 @@ class Problem(object):
 
         index_of_blank_space = state.index("0")
 
-        if action == "Left":
+        if action == "L":
             wState[index_of_blank_space], wState[index_of_blank_space + 1] \
                 = wState[index_of_blank_space + 1], wState[index_of_blank_space]
 
-        if action == "Right":
+        if action == "R":
             wState[index_of_blank_space], wState[index_of_blank_space - 1] \
                 = wState[index_of_blank_space - 1], wState[index_of_blank_space]
 
-        if action == "Up":
+        if action == "U":
             wState[index_of_blank_space], wState[index_of_blank_space + 3] \
                 = wState[index_of_blank_space + 3], wState[index_of_blank_space]
 
-        if action == "Down":
+        if action == "D":
             wState[index_of_blank_space], wState[index_of_blank_space - 3] \
                 = wState[index_of_blank_space - 3], wState[index_of_blank_space]
 
