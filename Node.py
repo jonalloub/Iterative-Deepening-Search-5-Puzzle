@@ -1,7 +1,7 @@
 from Problem import Problem
 
 class Node(object):
-    def __init__(self, state, action=None, parent=None):
+    def __init__(self, state, parent=None, action=None):
         self.action = action
         self.state = state
         self.parent = parent
