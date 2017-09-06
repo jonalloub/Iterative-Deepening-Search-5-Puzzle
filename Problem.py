@@ -8,7 +8,7 @@ class Problem(object):
     def actions(self, state):
         """Returns possible actions on current state"""
         actions_list = []
-        index_of_blank_space = state.index(0)
+        index_of_blank_space = state.index("0")
 
         # The four possible actions Up, Down, Left and Right
         # can only be done if the blank space is in a certain space
@@ -36,7 +36,7 @@ class Problem(object):
 
         wState = list(state)
 
-        index_of_blank_space = state.index(0)
+        index_of_blank_space = state.index("0")
 
         if action == "Left":
             wState[index_of_blank_space], wState[index_of_blank_space + 1] \

@@ -19,9 +19,6 @@ def depth_limited_search(problem, limit = 200 ):
         else:
             cutoff = False
             for child in node.expand(problem):
-                print("Child: " + str(child))
-                print("Parent: " + str(child.parent))
-                print("Problem: " + str(problem.initial))
                 result = recursive_dls(child, problem, limit - 1)
                 if result == "cutoff":
                     cutoff = True
@@ -31,8 +28,3 @@ def depth_limited_search(problem, limit = 200 ):
 
     return recursive_dls(Node(problem.initial), problem, limit)
 
-initial = [4,3,1,5,0,2]
-goal = [1,2,3,4,5,0]
-problem = Problem(initial, goal)
-result = iterative_deepening_search(problem)
-print(result.solution())
