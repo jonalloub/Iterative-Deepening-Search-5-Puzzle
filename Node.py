@@ -3,7 +3,7 @@ from Problem import Problem
 class Node(object):
     def __init__(self, state, parent=None, action=None):
         self.action = action
-        self.state = state
+        self.state = list(state)
         self.parent = parent
 
     def __repr__(self):

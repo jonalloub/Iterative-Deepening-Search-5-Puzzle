@@ -31,7 +31,8 @@ def depth_limited_search(problem, limit = 200 ):
 
     return recursive_dls(Node(problem.initial), problem, limit)
 
-initial = ["4", "3","1","5","0","2"]
-goal = ["1", "2","3","4","5","0"]
+initial = [4,3,1,5,0,2]
+goal = [1,2,3,4,5,0]
 problem = Problem(initial, goal)
-print(iterative_deepening_search(problem))
+result = iterative_deepening_search(problem)
+print(result.solution())
