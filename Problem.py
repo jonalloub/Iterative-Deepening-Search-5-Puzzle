@@ -36,7 +36,6 @@ class Problem(object):
 
         index_of_blank_space = state.index("0")
 
-        keep = self.initial
 
         if action == "Left":
             state[index_of_blank_space], state[index_of_blank_space + 1] \
@@ -54,7 +53,6 @@ class Problem(object):
             state[index_of_blank_space], state[index_of_blank_space - 3] \
                 = state[index_of_blank_space - 3], state[index_of_blank_space]
 
-        self.initial = keep
 
         return state
 
